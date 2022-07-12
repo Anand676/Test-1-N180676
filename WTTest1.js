@@ -11,7 +11,6 @@ function mytest(){
     var pnt=document.getElementById('psnt').value;
     var fee=document.getElementById('pymt').value;
     if(!p.test(usr)){
-        document.getElementById('user').style.backgroundColor='red';
         return false;
     }
     if(!gmail.test(email)){
@@ -83,4 +82,9 @@ bgH.addEventListener('mouseout',bgchange1);
 function bgchange1(){
     document.getElementById('hed').style.backgroundColor='violet';
     document.getElementById('hed1').style.color='white';
+}
+var tup=document.getElementById('user');
+tup.addEventListener('keyup',toupper);
+function toupper(){
+    document.getElementById('user').value=document.getElementById('user').value.toUpperCase();
 }
